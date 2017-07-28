@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Week 6: AJAX</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <title>NYT React Search</title>
+    <!-- Bootswatch -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+    <!-- Font-Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -14,23 +16,58 @@
 <body>
     <div class="container">
         <div class="row">
-            <h1 class="text-center">AJAX and APIs</h1>
+            <div class="col-md-12">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar">#</span>
+                                <span class="icon-bar">#</span>
+                                <span class="icon-bar">#</span>
+                            </button>
+                            <a class="navbar-brand" href="/">NYT-React</a>
+                        </div>
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="/search">Search</a></li>
+                                <li><a href="/saved">Saved Articles</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="jumbotron">
                     <div class="container">
                         <h2 class="text-center"><strong>(ReactJS) New York Times Article Scrubber</strong></h2>
-                        <p class="text-center">Search for and save articles of interest</p>
+                        <h3 class="text-center">Search for and save articles of interest</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="panel panel-default">
+                <div class="panel panel-primary">
                     <div class="panel-heading"><i class="fa fa-newspaper-o" aria-hidden="true"></i> <strong>Query</strong></div>
                     <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Topic</label>
+                                <input type="text" class="form-control" id="topic">
+                            </div>
+                            <div class="form-group">
+                                <label>Start Year</label>
+                                <input type="date" name="yr-start" max="1979" class="form-control" id="start">
+                            </div>
+                            <div class="form-group">
+                                <label>End Year</label>
+                                <input type="date" name="yr-end" max="1979" class="form-control" id="end">
+                            </div>
+                            <button type="submit" class="btn btn-danger" id="submit">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
