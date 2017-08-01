@@ -5,17 +5,23 @@ var Schema = mongoose.Schema;
 // create new schema
 var ArticleSchema = new Schema({
 
-	title: {
-		type: String
-	},
+    title: {
 
-	date: {
-		type: String
-	},
+        type: String
 
-	url: {
-		type: String
-	}
+    },
+
+    date: {
+
+        type: String
+
+    },
+
+    url: {
+
+        type: String
+        
+    }
 
 });
 
