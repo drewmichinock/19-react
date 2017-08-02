@@ -10,7 +10,15 @@ var Query = React.createClass({
         return (
 
         	<div className="container">
-            // insert component here
+                <ul className="list-group">
+                    <li className="list-group-item">
+                        <h3>
+                            <span>
+                                <em>Enter search terms to begin...</em>
+                            </span>
+                        </h3>
+                    </li>
+                </ul>
             </div>
 
         ); // end return
