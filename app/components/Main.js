@@ -12,7 +12,9 @@ var Main = React.createClass({
 
         return (
 
-        	// insert component here
+        	<div className="container">
+            // insert component here
+            </div>
 
         ); // end return
 

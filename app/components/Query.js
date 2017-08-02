@@ -9,7 +9,9 @@ var Query = React.createClass({
 
         return (
 
+        	<div className="container">
             // insert component here
+            </div>
 
         ); // end return
 

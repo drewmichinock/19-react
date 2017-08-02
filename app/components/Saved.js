@@ -9,7 +9,9 @@ var Saved = React.createClass({
 
         return (
 
+            <div className="container">
             // insert component here
+            </div>
 
         ); // end return
 
