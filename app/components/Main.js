@@ -4,6 +4,12 @@ var React = require("react");
 // include link from react router to navigate without page reloads
 var Link = require("react-router").Link;
 
+// include all the sub-components
+var Query = require("./Query");
+var Results = require("./Results");
+var Saved = require("./Saved");
+var Search = require("./Search");
+
 //create main component
 var Main = React.createclassName({
 
@@ -46,6 +52,11 @@ var Main = React.createclassName({
 	                </div>
 	            </div>
 	        </div>
+
+			{/* Search component goes here */}
+			<Search />
+
+			<Saved />
 			
 			<div className="row">
 	            <div className="col-lg-12">
