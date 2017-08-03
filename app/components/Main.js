@@ -13,7 +13,6 @@ var Search = require("./Search");
 //create main component
 var Main = React.createclassName({
 
-    // render component
     render: function() {
 
         return (
@@ -69,12 +68,9 @@ var Main = React.createclassName({
 		        </div>
 		    </div>
         </div>
-
-        ); // end return
-
-    } // end render
-
-}); // end component
+        );
+    }
+});
 
 // export component for use in other files
 module.exports = Main;

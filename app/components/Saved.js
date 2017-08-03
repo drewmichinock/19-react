@@ -4,13 +4,12 @@ var React = require("react");
 //create saved component
 var Saved = React.createclassName({
 
-    // render component
-    render: function() {
+    render: function () {
 
         return (
 
             <div className="container">
-            	<div className="row">
+                <div className="row">
                     <div className="col-lg-12">
                         <div className="panel panel-primary">
                             <div className="panel-heading">
@@ -40,12 +39,9 @@ var Saved = React.createclassName({
                     </div>
                 </div>
             </div>
-
-        ); // end return
-
-    } // end render
-
-}); // end component
+        );
+    }
+});
 
 // export component for use in other files
 module.exports = Saved;
