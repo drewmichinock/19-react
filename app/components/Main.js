@@ -10,10 +10,15 @@ var Results = require("./Results");
 var Saved = require("./Saved");
 var Search = require("./Search");
 
+// require helper for api calls
+var helpers = require("../utils/helpers");
+
 //create main component
-var Main = React.createclassName({
+var Main = React.createClass({
 
     render: function() {
+
+		console.log("working...");
 
         return (
 
@@ -54,6 +59,7 @@ var Main = React.createclassName({
 
 			{/* Search component goes here */}
 			{/* Added this.props.children to dump all of the child components into place */}
+			<Query />
             {this.props.children}
 			
 			<div className="row">

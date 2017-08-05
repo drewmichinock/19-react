@@ -2,7 +2,7 @@
 var React = require("react");
 
 //create saved component
-var Saved = React.createclassName({
+var Saved = React.createClass({
 
     render: function () {
 

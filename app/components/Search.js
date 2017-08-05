@@ -2,7 +2,7 @@
 var React = require("react");
 
 //create saved component
-var Search = React.createclassName({
+var Search = React.createClass({
 
     render: function () {
 

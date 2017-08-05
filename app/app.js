@@ -3,7 +3,7 @@ var React = require("react");
 var ReactDOM = require("react-dom");
 
 // include the main parent component
-var Parent = require("./components/Main");
+var Main = require("./components/Main");
 
 // Creating an App component which renders a ListContainer inside of a Container
 
