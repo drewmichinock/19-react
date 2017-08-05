@@ -4,11 +4,11 @@ var React = require("react");
 //create saved component
 var Search = React.createClass({
 
-    render: function () {
+    render: function() {
 
         return (
 
-            <div className="container">
+            <div>
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="panel panel-primary">

@@ -4,11 +4,10 @@ var React = require("react");
 //create saved component
 var Query = React.createClass({
 
-    render: function() {
+    render: function () {
 
         return (
-
-        	<div className="container">
+            <div>
                 <ul className="list-group">
                     <li className="list-group-item">
                         <h3>

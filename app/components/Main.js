@@ -5,10 +5,10 @@ var React = require("react");
 var Link = require("react-router").Link;
 
 // include all the sub-components
+var Search = require("./Search");
 var Query = require("./Query");
 var Results = require("./Results");
 var Saved = require("./Saved");
-var Search = require("./Search");
 
 // require helper for api calls
 var helpers = require("../utils/helpers");
@@ -54,11 +54,11 @@ var Main = React.createClass({
 	                </div>
 	            </div>
 	        </div>
+			{/* Search component goes here */}
+			<Search />
 
 			{/* Search component goes here */}
-			{/* Added this.props.children to dump all of the child components into place */}
 			<Query />
-            {this.props.children}
 			
 			<div className="row">
 	            <div className="col-lg-12">
