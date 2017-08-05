@@ -53,9 +53,8 @@ var Main = React.createclassName({
 	        </div>
 
 			{/* Search component goes here */}
-			<Search />
-
-			<Saved />
+			{/* Added this.props.children to dump all of the child components into place */}
+            {this.props.children}
 			
 			<div className="row">
 	            <div className="col-lg-12">
