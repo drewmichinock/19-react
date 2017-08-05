@@ -18,8 +18,6 @@ var Main = React.createClass({
 
     render: function() {
 
-		console.log("working...");
-
         return (
 
         <div className="container">
