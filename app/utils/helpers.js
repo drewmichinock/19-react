@@ -4,11 +4,7 @@ var axios = require("axios");
 // ny times api key
 var authKey = "b9f91d369ff59547cd47b931d8cbc56b:0:74623931";
 
-// variables to hold results
-var topic = "";
-var startYear = 0;
-var endYear = 0;
-
+// helper function
 var helpers = {
 
     runQuery: function(topic) {

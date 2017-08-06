@@ -8,7 +8,7 @@ var Results = React.createClass({
 
         return (
 
-            <div className="container">
+            <div>
             	<div className="row">
                     <div className="col-lg-12">
                         <div className="panel panel-primary">
@@ -24,14 +24,14 @@ var Results = React.createClass({
                                     <li className="list-group-item">
                                         <h3>
                                             <span>
-                                                <em>Title</em>
+                                                <em>{this.props.title}</em>
                                             </span>
                                             <span className="btn-group pull-right">
                                                 <a href="#" className="btn btn-default" target="_blank">View Article</a>
                                                 <a href="#" className="btn btn-primary">Save</a>
                                             </span>
                                         </h3>
-                                        <p>Date Published: #</p>
+                                        <p>Date Published: {this.props.date}</p>
                                     </li>
                                 </ul>
                             </div>

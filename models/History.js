@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 // create new schema
-var ArticleSchema = new Schema({
+var HistorySchema = new Schema({
 
     title: {
         type: String
@@ -20,7 +20,7 @@ var ArticleSchema = new Schema({
 });
 
 // create model
-var Article = mongoose.model("Article", ArticleSchema);
+var History = mongoose.model("History", HistorySchema);
 
 // export for use elsewhere
-module.exports = Article;
+module.exports = History;

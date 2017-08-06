@@ -32,9 +32,6 @@ var Search = React.createClass({
         // ...set parent to have search term
         this.props.setTerm(this.state.topic);
 
-        // ...clear input fields are submisson
-        this.setState({ topic: "" });
-
     },
 
     render: function() {

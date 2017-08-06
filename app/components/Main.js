@@ -96,8 +96,11 @@ var Main = React.createClass({
 				{/* Search component goes here */}
 				<Search setTerm={this.setTerm} />
 
-				{/* Search component goes here */}
+				{/* Query component goes here */}
 				<Query />
+
+				{/* Results component goes here */}
+				<Results />
 
 				<footer>
 					<hr />
