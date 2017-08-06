@@ -19,6 +19,12 @@ var helpers = {
 
         console.log(response);
 
+        console.log(response.data.response.docs[0].headline.main);
+
+        console.log(response.data.response.docs[0].pub_date);
+
+        console.log(response.data.response.docs[0].web_url);
+
         return response.data.results;
 
         });

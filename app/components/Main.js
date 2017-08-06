@@ -29,8 +29,6 @@ var Main = React.createClass({
 		// If we have a new search term, run a new search
 		if (prevState.searchTerm !== this.state.searchTerm) {
 
-		console.log("UPDATED");
-
 		helpers.runQuery(this.state.searchTerm).then(function(data) {
 
 			if (data !== this.state.results) {
