@@ -16,6 +16,45 @@ var helpers = require("../utils/helpers");
 //create main component
 var Main = React.createClass({
 
+	// get initial state of component
+	getInitialState: function() {
+
+	return { topic: "" };
+	
+	},
+
+	// run every time the component updates props or state
+	componentDidUpdate: function(prevProps, prevState) {
+
+		// If we have a new search term, run a new search
+		if (prevState.searchTerm !== this.state.searchTerm) {
+
+		console.log("UPDATED");
+
+		helpers.runQuery(this.state.searchTerm).then(function(data) {
+
+			if (data !== this.state.results) {
+
+			console.log(data);
+
+			this.setState({ results: data });
+
+			}
+
+			// This code is necessary to bind the keyword "this" when we say this.setState
+			// to actually mean the component itself and not the runQuery function.
+		}.bind(this));
+
+		}
+
+	},
+
+	setTerm: function(topic) {
+
+		this.setState({ searchTerm: topic });
+		
+	},
+
 	render: function () {
 
 		return (
@@ -55,7 +94,7 @@ var Main = React.createClass({
 					</div>
 				</div>
 				{/* Search component goes here */}
-				<Search />
+				<Search setTerm={this.setTerm} />
 
 				{/* Search component goes here */}
 				<Query />

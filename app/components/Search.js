@@ -1,12 +1,14 @@
 // include react
 var React = require("react");
 
-//create saved component
+// create saved component
 var Search = React.createClass({
 
     // set initial state of search fields
     getInitialState: function() {
-        return { topic: "", start: 0, end: 0};
+
+        return { topic: ""};
+
     },
 
     // function responds to user input
@@ -14,8 +16,25 @@ var Search = React.createClass({
 
         // capture any change in text to query terms
         var newState = {};
+
         newState[event.target.id] = event.target.value;
+
         this.setState(newState);
+
+    },
+
+    // when user submits form...
+    handleSubmit: function(event) {
+
+        // ...prevent form submitting itself
+        event.preventDefault();
+
+        // ...set parent to have search term
+        this.props.setTerm(this.state.topic);
+
+        // ...clear input fields are submisson
+        this.setState({ topic: "" });
+
     },
 
     render: function() {
@@ -34,7 +53,7 @@ var Search = React.createClass({
                                 </h1>
                             </div>
                             <div className="panel-body">
-                                <form>
+                                <form onSubmit={this.handleSubmit}>
                                     <div className="form-group">
                                         
                                         <h4><strong>Topic</strong></h4>
@@ -69,7 +88,11 @@ var Search = React.createClass({
 
                                     </div>
                                     <div className="pull-right">
-                                        <button type="submit" className="btn btn-danger"><h4>Submit</h4></button>
+                                        <button 
+                                            type="submit" 
+                                            className="btn btn-danger"
+                                        >
+                                        <h4>Submit</h4></button>
                                     </div>
                                 </form>
                             </div>
